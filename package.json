@@ -1,0 +1,23 @@
+{
+  "name": "music-festival",
+  "version": "1.0.0",
+  "description": "a music festival site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "HTML",
+    "SASS",
+    "GULP"
+  ],
+  "author": "Felipe Bucherenick",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.3"
+  }
+}
