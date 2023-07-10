@@ -1,7 +1,7 @@
 @use "vars" as v;
 
 @mixin min-width($breakpoint) {
-  @if ($breakpoint == xsmall) {
+  @if ($breakpoint == x-small) {
     @media (min-width: v.$breakpoint-xsmall) {
       @content;
     }
@@ -17,7 +17,7 @@
     @media (min-width: v.$breakpoint-large) {
       @content;
     }
-  } @else if ($breakpoint == xlarge) {
+  } @else if ($breakpoint == x-large) {
     @media (min-width: v.$breakpoint-extra-large) {
       @content;
     }

@@ -1,0 +1,98 @@
+@use "base/vars" as v;
+@use "base/mixins" as m;
+
+.line-up {
+  @include m.column-center;
+  background-color: v.$primary-color;
+  margin: 4rem 0.8rem;
+  border-radius: 4rem;
+}
+
+.line-up__title {
+  margin: 4rem 0;
+  color: v.$font-color-white;
+}
+
+.day {
+  @include m.column-center;
+  width: 80%;
+}
+
+.day__title {
+  color: v.$font-color-white;
+  font-weight: 400;
+}
+
+.stages {
+  @include m.column-center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 6rem;
+  @include m.min-width(small) {
+    flex-direction: row;
+    gap: 6rem;
+  }
+}
+
+.stage {
+  @include m.column-center;
+  width: 100%;
+  border-radius: 4rem;
+  h3 {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+}
+
+.stage--rock {
+  background-color: v.$secondary-color-blue;
+  color: v.$font-color-white;
+}
+
+.stage--edm {
+  background-color: v.$secondary-color-yellow;
+  color: v.$font-color-dark;
+}
+
+.stage__icon {
+  width: 12rem;
+  margin-bottom: 4rem;
+  img {
+    width: 100%;
+  }
+}
+
+.stage__icon--rock {
+  img {
+    filter: invert(0.8);
+  }
+}
+
+.stage__list {
+  width: 100%;
+  padding: 0;
+  li {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 2rem 2rem;
+    color: v.$font-color-dark;
+    background-color: inherit;
+  }
+  li:nth-child(odd) {
+    background-color: darken(v.$secondary-color-yellow, 5%);
+  }
+  span {
+    font-weight: 400;
+  }
+}
+
+.stage__list--rock {
+  li {
+    color: v.$font-color-white;
+  }
+  li:nth-child(odd) {
+    background-color: darken(v.$secondary-color-blue, 10%);
+  }
+}

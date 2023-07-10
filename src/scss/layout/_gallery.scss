@@ -1,0 +1,64 @@
+@use "base/vars" as v;
+@use "base/mixins" as m;
+
+.gallery {
+  @include m.column-center;
+  margin: 8rem 0.8rem;
+}
+.gallery__title {
+  color: v.$font-color-dark;
+}
+
+.gallery__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @include m.min-width(small) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include m.min-width(medium) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include m.min-width(large) {
+    width: 80%;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 /0.5);
+}
+
+.overlay-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  picture {
+    display: block;
+    width: 60%;
+    border-radius: 4rem;
+    img {
+      border-radius: 4rem;
+    }
+  }
+  p {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: v.$font-color-white;
+  }
+  p:hover {
+    cursor: pointer;
+  }
+}

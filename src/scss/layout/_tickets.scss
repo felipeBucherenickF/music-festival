@@ -1,0 +1,66 @@
+@use "base/vars" as v;
+@use "base/mixins" as m;
+
+.tickets {
+  @include m.column-center;
+  margin: 0 0.8rem;
+  padding: 2rem;
+  border-radius: 4rem;
+  background-color: v.$secondary-color-blue;
+}
+
+.tickets__title {
+  margin: 4rem 0;
+  color: v.$font-color-white;
+}
+.passes {
+  @include m.column-center;
+  gap: 4rem;
+  width: 80%;
+  margin-bottom: 4rem;
+  @include m.min-width(small) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8rem;
+  }
+}
+
+.pass {
+  @include m.column-center;
+  width: 100%;
+  &__title {
+    font-weight: 400;
+    color: v.$font-color-white;
+  }
+  &__table {
+    width: 100%;
+    border-radius: 4rem;
+    li {
+      padding: 2rem;
+      color: v.$primary-color;
+      font-weight: 700;
+      background-color: v.$font-color-white;
+      border-top: 2px solid v.$primary-color;
+    }
+  }
+
+  &__header {
+    padding: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    font-size: 2rem;
+    text-align: center;
+    color: v.$font-color-white;
+    background-color: v.$primary-color;
+  }
+
+  &__footer {
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: v.$primary-color;
+    background-color: v.$secondary-color-yellow;
+  }
+}

@@ -8,12 +8,21 @@ html {
 *:after,
 *:before {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: v.$main-font;
   font-size: 1.6rem;
   background-color: v.$font-color-white;
+  &.scroll-body {
+    padding-top: 12rem;
+  }
+}
+
+.fixed-body {
+  overflow: hidden;
 }
 
 a {
@@ -33,4 +42,14 @@ h2 {
 }
 h3 {
   font-size: 2.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

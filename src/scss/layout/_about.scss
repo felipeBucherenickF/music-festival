@@ -3,9 +3,10 @@
 
 .about {
   @include m.column-center;
-  margin: 6rem 0.8rem;
+  margin: 8rem 0.8rem;
   @include m.min-width(medium) {
     flex-direction: row;
+    justify-content: center;
     gap: 2rem;
   }
 }
@@ -24,7 +25,7 @@
 }
 
 .about__content {
-  display: fle;
+  max-width: 48rem;
   color: v.$font-color-dark;
   font-weight: bold;
   font-size: 1.8rem;

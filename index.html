@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Music Festival" />
     <title>Rock & EDM Festival</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Cherry+Bomb+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="build/css/app.css" />
@@ -16,9 +17,9 @@
     <header class="header">
       <h1 class="title">Rock & EDM Festival</h1>
       <nav class="navbar">
-        <a href="">Line Up</a>
-        <a href="">Galería</a>
-        <a href="">Boletos</a>
+        <a href="#line-up">Line Up</a>
+        <a href="#gallery">Galería</a>
+        <a href="#tickets">Boletos</a>
       </nav>
     </header>
 
@@ -38,7 +39,16 @@
 
     <section class="about">
       <div class="about__image">
-        <img src="assets/img/vocalist-image.jpg" alt="" />
+        <picture>
+          <source srcset="build/img/vocalist-image.avif" type="image/avif" />
+          <img
+            loading="lazy"
+            width="200"
+            height="300"
+            src="build/img/vocalist-image.jpg"
+            alt="Imagen de un vocalista de rock"
+          />
+        </picture>
       </div>
       <div class="about__content">
         <h2 class="about__title">Rock & EDM Festival</h2>
@@ -51,5 +61,125 @@
         </p>
       </div>
     </section>
+
+    <section id="line-up" class="line-up">
+      <h2 class="line-up__title">Line Up</h2>
+
+      <div class="day">
+        <h3 class="day__title">VIERNES 14</h3>
+        <div class="stages">
+          <div class="stage stage--rock">
+            <h3>ESCENARIO ROCK</h3>
+            <div class="stage__icon stage__icon--rock">
+              <img src="build/img/rock-icon.png" alt="Figura de una guitarra" />
+            </div>
+            <ul class="stage__list stage__list--rock">
+              <li>24:00 | <span>Red Hot Chili Peppers</span></li>
+              <li>22:00 | <span>The Killers</span></li>
+              <li>20:00 | <span>Deftones</span></li>
+              <li>19:00 | <span>Limp Bizkit</span></li>
+              <li>18:00 | <span>Papa Roach</span></li>
+              <li>17:00 | <span>Lamb of God</span></li>
+            </ul>
+          </div>
+          <div class="stage stage--edm">
+            <h3>ESCENARIO EDM</h3>
+            <div class="stage__icon stage__icon--edm">
+              <img
+                src="build/img/edm-icon.png"
+                alt="Figura de unas audifonos"
+              />
+            </div>
+            <ul class="stage__list">
+              <li>24:00 | <span>Deadmau5</span></li>
+              <li>22:00 | <span>Tïesto</span></li>
+              <li>20:00 | <span>Hardwell</span></li>
+              <li>19:00 | <span>Dash Berlin</span></li>
+              <li>18:00 | <span>Fedde Legrand</span></li>
+              <li>17:00 | <span>Audien</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <h3 class="day__title">SABADO 15</h3>
+        <div class="stages">
+          <div class="stage stage--edm">
+            <h3>ESCENARIO EDM</h3>
+            <div class="stage__icon stage__icon--edm">
+              <img
+                src="build/img/edm-icon.png"
+                alt="Figura de unas audifonos"
+              />
+            </div>
+            <ul class="stage__list">
+              <li>24:00 | <span>Paul Van Dyk</span></li>
+              <li>22:00 | <span>Armin Van Buuren</span></li>
+              <li>20:00 | <span>Above & Beyond</span></li>
+              <li>19:00 | <span>Eric Prdyz</span></li>
+              <li>18:00 | <span>Ferry Corsten</span></li>
+              <li>17:00 | <span>Vini Vici</span></li>
+            </ul>
+          </div>
+          <div class="stage stage--rock">
+            <h3>ESCENARIO ROCK</h3>
+            <div class="stage__icon stage__icon--rock">
+              <img src="build/img/rock-icon.png" alt="Figura de una guitarra" />
+            </div>
+            <ul class="stage__list stage__list--rock">
+              <li>24:00 | <span>Metallica</span></li>
+              <li>22:00 | <span>Pearl Jam</span></li>
+              <li>20:00 | <span>KoRn</span></li>
+              <li>19:00 | <span>Muse</span></li>
+              <li>18:00 | <span>Breaking Benjamin</span></li>
+              <li>17:00 | <span>30 Seconds to Mars</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2 class="gallery__title">Galería</h2>
+      <ul class="gallery__images"></ul>
+    </section>
+
+    <section id="tickets" class="tickets">
+      <h2 class="tickets__title">Boletos</h2>
+      <div class="passes">
+        <div class="pass">
+          <h3 class="pass__title">Pase 1 día</h3>
+          <div class="pass__table">
+            <header class="pass__header">INCLUYE</header>
+            <ul>
+              <li>Acceso a ambos escenarios</li>
+              <li>Comida y Bebida</li>
+            </ul>
+            <footer class="pass__footer">$150.000</footer>
+          </div>
+        </div>
+
+        <div class="pass">
+          <h3 class="pass__title">Pase 2 días</h3>
+          <div class="pass__table">
+            <header class="pass__header">INCLUYE</header>
+            <ul>
+              <li>Acceso a ambos escenarios</li>
+              <li>Comida y Bebida</li>
+              <li>Camisa del evento</li>
+              <li>Acceso VIP</li>
+            </ul>
+            <footer class="pass__footer">$230.000</footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Rock & EDM Festival. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="build/js/app.js"></script>
   </body>
 </html>

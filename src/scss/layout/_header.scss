@@ -12,10 +12,20 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+    height: 12rem;
     padding: 0 2rem;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      z-index: 1;
+      box-shadow: -1px 6px 5px 0px rgba(0, 0, 0, 0.42);
+    }
   }
   h1 {
-    font-family: v.$title-font;
+    font-family: v.$main-font;
     text-align: center;
     color: v.$font-color-white;
   }
@@ -32,5 +42,10 @@
   }
   a {
     color: v.$font-color-white;
+    cursor: pointer;
+    transition: all ease 0.2s;
+  }
+  a:hover {
+    color: v.$secondary-color-blue;
   }
 }
